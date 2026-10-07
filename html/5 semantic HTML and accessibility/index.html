@@ -14,7 +14,36 @@ Do images have alt text?
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semantic HTML and accessibility</title>
 </head>
-<body>
-    
+<body style="display: grid; grid-template-columns: 3fr 1fr; background-color: #161616; color: #dedede;">
+    <header style="grid-column: 1 / -1;">
+        <nav>
+            <ul style="list-style-type: none; display: flex; gap: 5em; justify-content: flex-end; margin-right: 3em;">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">About Me</a>
+                </li>
+                <li>
+                    <a href="">Projects</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main style="margin: 3em;">
+        <h1>Welcome to Jem's World</h1>
+        <article>
+            <h2>Role</h2>
+            <p>Software Engineer / Technical Support</p>
+        </article>
+        <article>
+            <h2>School Graduated</h2>
+            <p>University of San Carlos - Batch 2026</p>
+        </article>
+    </main>
+    <footer style="text-align: center; position: fixed; bottom: 0; width: 100%;">
+        <hr>
+        <p>&copy; 2026 Jem</p>
+    </footer>
 </body>
 </html>
