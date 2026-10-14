@@ -1,0 +1,43 @@
+<!-- Showing you all 3 ways to add css 
+ 
+1. In CodePen, add this to the CSS panel: `body { background-color: #1a1a1a; color: white; 
+    font-family: Arial; }`. Watch the preview update instantly.
+2. Learn the 3 ways to add CSS: inline style attribute, <style> tag in <head>, and external 
+    .css file linked with <link>. Try all three in CodePen.
+3. Read https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS — write: 
+    what does 'cascading' mean in CSS?
+4. Style a page with: a background color, 3 different text colors, 2 different font sizes, 
+    and a border around one element. Write the CSS rule for each.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css"> <!-- 1. external css is added using this <link> element -->
+    <style>
+        body{
+            font-family: Arial;
+        }
+
+        article {
+            border: solid;
+        }
+    </style> <!-- 2. css is done inside the <head> element by adding a <style> element -->
+</head>
+<body>
+    <nav style="background-color: black;">
+        <h1>Whats up everyone</h1>
+    </nav><!-- 3. the nav attribute below shows that the style is applied inline -->
+    <article>
+        <h2>Text Color 1</h2>
+        <p>- the text above is the first example of a text that's modified thru css by changing its color.</p>
+    </article> 
+    <article>
+        <h2>Text Color 2</h2>
+        <p>- the text above is the second example of a text that's modified thru css, where i also changed its color, font family and font size.</p>
+    </article>
+    <article>
+        <h2>Text Color 3</h2>
+        <p>- the text above is the third example of a text that's modified thru css and i also changed its color and font family</p>
+    </article>
+</body>
+</html>
