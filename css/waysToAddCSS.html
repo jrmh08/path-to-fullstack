@@ -14,30 +14,56 @@
 <head>
     <link rel="stylesheet" href="index.css"> <!-- 1. external css is added using this <link> element -->
     <style>
-        body{
+        /* the attributes made here are only applied to the element specified, ex. body is for <body> element*/
+        body {
             font-family: Arial;
+            background-color: #001022;
+        }
+
+        nav {
+            border: solid 1pt #00428d;
+            box-shadow: 0px 4px 15px 2px #00428d;
+            border-radius: 15px;
+            margin: 5em;
+            background-color: #000913;
         }
 
         article {
-            border: solid;
+            border: solid 1pt #00428d;
+            box-shadow: 0px 4px 15px 2px #00428d;
+            border-radius: 15px;
+            margin: 5em;
+            background-color: #000913;
+        }
+
+        h2 {
+            margin: 1cm;
+            border: solid #00428d 1pt; 
+            border-radius: 15px; 
+            padding-left: 10px;
+        }
+
+        p {
+            margin: 1cm;
+            color: #77b6ff;
         }
     </style> <!-- 2. css is done inside the <head> element by adding a <style> element -->
 </head>
 <body>
-    <nav style="background-color: black;">
-        <h1>Whats up everyone</h1>
+    <nav style="background-color: rgba(255,255,255,.12)">
+        <h1 style="margin: 1em; color: #77b6ff;">Whats up everyone, this page is about the ways to add CSS and styling a page with many types of text designs</h1>
     </nav><!-- 3. the nav attribute below shows that the style is applied inline -->
     <article>
-        <h2>Text Color 1</h2>
-        <p>- the text above is the first example of a text that's modified thru css by changing its color.</p>
+        <h2 style="color: yellow;">Text Color 1</h2>
+        <p>- the text above is the first example of a text that's modified thru css by changing its <u><em><b>color</b></em></u>.</p>
     </article> 
     <article>
-        <h2>Text Color 2</h2>
-        <p>- the text above is the second example of a text that's modified thru css, where i also changed its color, font family and font size.</p>
+        <h2 style="font-family: 'Times New Roman', Times, serif; color: Blue; font-size: xxx-large;">Text Color 2</h2>
+        <p>- the text above is the second example of a text that's modified thru css, where i also changed its <u><em><b>color</b></em></u>, <u><em><b>font family</b></em></u> and <u><em><b>font size</b></em></u>.</p>
     </article>
     <article>
-        <h2>Text Color 3</h2>
-        <p>- the text above is the third example of a text that's modified thru css and i also changed its color and font family</p>
+        <h2 style="font-family: 'Courier New', Courier, monospace; color: Cyan;">Text Color 3</h2>
+        <p>- the text above is the third example of a text that's modified thru css and i also changed its <u><em><b>color</b></em></u> and <u><em><b>font family</b></em></u>.</p>
     </article>
 </body>
 </html>
