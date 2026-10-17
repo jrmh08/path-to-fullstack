@@ -15,6 +15,10 @@
     <head>
         <title>Colors, Typography and Spacing</title>
         <meta charset="utf-8">
+        <link rel="preconnect" href="https://googleapis.com">
+        <link rel="preconnect" href="https://gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Varela+Round&display=swap" rel="stylesheet">
 
         <style>
             nav {
@@ -38,11 +42,55 @@
                     inset 0 -1px 1px rgba(255, 255, 255, 0.12),
                     0 10px 30px rgba(0, 0, 0, 0.25);
             }
+
+            button {
+                width: 10em;
+                background-color: #ffbb7f; 
+                border-radius: 999px;
+                border: 1px solid rgba(255, 255, 255, 0.22);
+            }
+
+            button:hover {
+                background-color: #856142;
+            }
+
+            #themes {
+                display: flex;
+                margin-top: 10em;
+            }
+
+            #list { 
+                margin-right: 50%;
+                margin-left: 50%;
+            }
         </style>
     </head>
     <body style="background-color: #1F150C;">
         <nav>
-            <h1 style="color: #ffbb7f;">Hello, this page is about Colors, Typography and Spacing</h1>
+            <h1 style="color: #ffbb7f; font-family: 'Varela Round', sans-serif; padding-left: 0.5em; padding-right: 0.5em;">Hello, this page is about Colors, Typography and Spacing</h1>
         </nav>
+
+        <div id="themes">
+            <article>
+                <h2>Please Press the dark theme you want to change the background with:</h2>
+            </article>
+        </div>
+        <article id="list">
+            <div>
+                <button>
+                    <h4>Brown</h4>
+                </button>
+            </div>
+            <div>
+                <button>
+                    <h4>Green</h4>
+                </button>
+            </div>
+            <div>
+                <button>
+                    <h4>Blue</h4>
+                </button>
+            </div>
+        </article>                
     </body>
 </html>
