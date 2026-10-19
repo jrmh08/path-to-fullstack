@@ -28,11 +28,11 @@
         </nav>
 
         <div class="themes">
-            <article style="color: #ffbb7f; margin: auto;">
+            <article class="themes-heading">
                 <h2>Please Press the dark theme you want to change the background with:</h2>
             </article>
         </div>
-        <article style="display: flex; color: #ffe2c9;">
+        <article class="cards">
             <div class="themelist">
                 <h4>Color Palette:</h4>
                 <div class="palette">
@@ -40,7 +40,7 @@
                     <div class="swatch" style="--c: #ffbb7f"></div>
                     <div class="swatch" style="--c: #1F150C"></div>
                 </div>
-                <button>
+                <button data-bg="#1F150C" data-accent="#ffbb7f" data-text="#ffe2c9">
                     Brown
                 </button>
             </div>
@@ -48,24 +48,35 @@
                 <h4>Color Palette:</h4>
                 <div class="palette">
                     <div class="swatch" style="--c: #092328"></div>
-                    <div class="swatch" style="--c: #2A835F"></div>
-                    <div class="swatch" style="--c: #8BBB92"></div>
+                    <div class="swatch" style="--c: #38a378"></div>
+                    <div class="swatch" style="--c: #aee7b7"></div>
                 </div>
-                <button>
+                <button data-bg="#092328" data-accent="#38a378  " data-text="#aee7b7">
                     Green
                 </button>
             </div>
             <div class="themelist">
                 <h4>Color Palette:</h4>
                 <div class="palette">
-                    <div class="swatch" style="--c: #010736"></div>
-                    <div class="swatch" style="--c: #22396F"></div>
-                    <div class="swatch" style="--c: #FCF1D0"></div>
+                    <div class="swatch" style="--c: #00041f"></div>
+                    <div class="swatch" style="--c: #3459af"></div>
+                    <div class="swatch" style="--c: #b0c8ff"></div>
                 </div>
-                <button>
+                <button data-bg="#00041f" data-accent="#3459af" data-text="#b0c8ff">
                     Blue
                 </button>
             </div>
-        </article>                
+        </article>    
+        
+        <script>
+            const root = document.documentElement;
+            document.querySelectorAll('button[data-bg]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    root.style.setProperty('--bg', btn.dataset.bg);
+                    root.style.setProperty('--accent', btn.dataset.accent);
+                    root.style.setProperty('--text', btn.dataset.text);
+                });
+            });
+        </script>
     </body>
 </html>
