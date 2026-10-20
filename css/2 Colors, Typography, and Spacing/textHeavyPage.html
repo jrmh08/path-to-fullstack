@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Colors, Typography and Spacing</title>
+        <link rel="stylesheet" href="colorsTypographyAndSpacing.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://googleapis.com">
+        <link rel="preconnect" href="https://gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Varela+Round&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="/css/2 Colors, Typography, and Spacing/colorsTypographyAndSpacing.html"><h1>Back</h1></a>
+            <nav>
+                <h1>About Me</h1>
+            </nav>
+        </div>
+        
+
+        <div class="themes">
+            <article class="themes-heading">
+                <h2>Please Press the dark theme you want to change the background with:</h2>
+            </article>
+        </div>
+        <article class="cards">
+            <div class="themelist">
+                <h4>Color Palette:</h4>
+                <div class="palette">
+                    <div class="swatch" style="--c: #1F150C"></div>
+                </div>
+                <button data-bg="#1F150C" data-accent="#ffbb7f" data-text="#ffe2c9">
+                    Brown
+                </button>
+            </div>
+            <div class="themelist">
+                <h4>Color Palette:</h4>
+                <div class="palette">
+                    <div class="swatch" style="--c: #092328"></div>
+                </div>
+                <button data-bg="#092328" data-accent="#38a378  " data-text="#aee7b7">
+                    Green
+                </button>
+            </div>
+            <div class="themelist">
+                <h4>Color Palette:</h4>
+                <div class="palette">
+                    <div class="swatch" style="--c: #00041f"></div>
+                </div>
+                <button data-bg="#00041f" data-accent="#3459af" data-text="#b0c8ff">
+                    Blue
+                </button>
+            </div>
+        </article>    
+        
+        <script>
+            const root = document.documentElement;
+            document.querySelectorAll('button[data-bg]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    root.style.setProperty('--bg', btn.dataset.bg);
+                    root.style.setProperty('--accent', btn.dataset.accent);
+                    root.style.setProperty('--text', btn.dataset.text);
+                });
+            });
+        </script>
+    </body>
+</html>
