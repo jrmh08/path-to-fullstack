@@ -13,6 +13,21 @@ body {
     transition: background-color .4s;
 }
 
+/* sm: 640px and up */
+@media (min-width: 640px) {
+  .cards { grid-template-columns: 1fr; }
+}
+
+/* md: 768px and up */
+@media (min-width: 768px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* lg: 1024px and up */
+@media (min-width: 1024px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+
 nav h1,
 .themes-heading {
     color: var(--accent);
@@ -42,7 +57,8 @@ nav {
 }
 
 .cards {
-    display: flex; 
+    display: grid;
+    gap: 8px;
     color: var(--text);
     transition: color .4s;
 }
@@ -65,6 +81,7 @@ button {
 
 button:hover {
     background-color: var(--accent);
+    color: var(--bg);
     transition: .4s;
 }
 
