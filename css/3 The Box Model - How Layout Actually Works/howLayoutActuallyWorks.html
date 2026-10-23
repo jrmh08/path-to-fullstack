@@ -1,0 +1,44 @@
+<!-- 
+1. Open Chrome DevTools (F12) on any website. Click an element, then go to the 'Computed' tab. 
+Find the box model diagram — it shows the actual margin, border, padding, and content size.
+2. In CodePen, create a div with background-color, width:200px, padding:20px, border:5px solid 
+red, and margin:30px. Inspect it in DevTools and verify the total rendered size.
+3. Learn box-sizing: add `* { box-sizing: border-box; }` to your CSS. Notice how padding no 
+longer adds to the element's width — write why this matters for layout.
+4. Build a card component: a div with a heading, paragraph, and button inside. Give it a white 
+background, shadow (box-shadow), rounded corners (border-radius), and 24px padding. 
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Box Model: How Layout Actually Works</title>
+        <link rel="stylesheet" href="/css/3 The Box Model - How Layout Actually Works/howLayoutActuallyWorks.css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div class="divwithbgc">
+            <h3>This is a div that has a background color, width, padding, border and margin</h3>
+        </div>
+
+        <div class="divinboxsizing">
+            <h3>This is a div that has a background color, width, padding, border and margin,
+                but now with box-sizing
+            </h3>
+        </div>
+
+        <div class="explain1">
+            <h1 style="width: 5em;">
+                <--
+            </h1>
+                
+            <h4>
+                why did the one with box-sizing: border-box; change its div size? This is because 
+                the element stays the exact size defined from all the attributes applied. The one 
+                without the attribute or in content-box (default), only applies the width and
+                height to the inner content area. so yeah, default = inner content, 
+                border-box = every attribute.
+            </h4>
+        </div>
+    </body>
+</html>
