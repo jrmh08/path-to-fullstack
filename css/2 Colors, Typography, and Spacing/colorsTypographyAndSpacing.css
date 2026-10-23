@@ -35,7 +35,6 @@ nav h1,
 }
 
 h1 {
-    color: #ffbb7f; 
     padding-left: 0.5em; 
     padding-right: 0.5em;
 }
@@ -61,6 +60,7 @@ nav {               /* or sticky, so the page scrolls under it */
 
 a {
     top: 12px;
+    color: var(--accent);
 
     display: flex;
     gap: 4px;
@@ -157,6 +157,8 @@ button:hover {
 }
 
 .button2 {
+    display: flex;
+    align-items: center;
     width: 7em;
     height: 2em;
     border-radius: 999px;
@@ -185,4 +187,18 @@ button:hover {
     aspect-ratio: 1;
     border-radius: 999px;
     background: var(--c);
+    margin-right: 0.5em;
+}
+
+.heavy-text {
+    margin-left: 15em;
+    margin-right: 5em;
+    text-align: justify;
+    text-indent: 50px;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+}
+
+.paragraph {
+    color: var(--text);
 }
