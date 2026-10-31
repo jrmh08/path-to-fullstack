@@ -2,3 +2,8 @@
     display: flex;
     background-color: rgb(200, 255, 0);
 }
+
+.minitask2 {
+    background-color: aqua;
+    padding: 1cm;
+}
